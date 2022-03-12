@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
@@ -38,6 +40,10 @@ public class GuiGenerador extends JFrame {
 		
 		textAreaResultado = new JTextArea();
 		panel.add(textAreaResultado, BorderLayout.CENTER);
+		
+		JScrollPane sp = new JScrollPane(textAreaResultado);
+		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		panel.add(sp);
 		
 		JButton btnGenerar = new JButton("Lista de ip");
 		btnGenerar.addActionListener(new ActionListener() {
