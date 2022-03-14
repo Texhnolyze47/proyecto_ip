@@ -17,7 +17,6 @@ public class GuiGenerador extends JFrame {
 	private JPanel contentPane;
 	private JTextArea textAreaResultado;
 
-
 	/**
 	 * Create the frame.
 	 */
@@ -28,21 +27,21 @@ public class GuiGenerador extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(new BorderLayout(0, 0));
-		
+
 		JLabel lbTitulo = new JLabel("Generador Ip");
 		panel.add(lbTitulo, BorderLayout.NORTH);
-		
+
 		textAreaResultado = new JTextArea();
 		panel.add(textAreaResultado, BorderLayout.CENTER);
-		
+
 		JScrollPane sp = new JScrollPane(textAreaResultado);
 		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		panel.add(sp);
-		
+
 		JButton btnGenerar = new JButton("Lista de ip");
 		btnGenerar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -52,9 +51,9 @@ public class GuiGenerador extends JFrame {
 		panel.add(btnGenerar, BorderLayout.SOUTH);
 	}
 
-	//ya que los componenetes normalmente tiene un modificador
-	//private se uitliza un getter para extraer la informacion 
-	//que posee el compoenete
+	// ya que los componenetes normalmente tiene un modificador
+	// private se uitliza un getter para extraer la informacion
+	// que posee el compoenete
 	public JTextArea getTextAreaResultado() {
 		return textAreaResultado;
 	}
