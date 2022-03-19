@@ -6,3 +6,19 @@ Lo primero que se necesita es tener la linea de comando de mysql y ejecutar la s
 mysql -uroot -padmin casting < casting.sql
 ```
 
+## Estructura del archivo
+
+El proyecto consiste en una base de datos y un app java la cual se encarga de todas las instrucciones donde encontramos tres carpetas:
+
+
+* **Controlador**
+Esta se encarga de ejecutar la app por medio de un metodo main el cual inicia la interfaz gráfica.
+
+* **logica**
+En esta seccion encontraremos toda la logica la cual por medio de un boton nos genera un direccion ip totalmente aleatoria, una vez generada la direccion nos la muestra en una pequeña ventana donde ademas de generarla este mismo se encarga de hacer un push hacia la base de datos donde se iran almacenando conforme se vallan generando.
+
+* **vistas**
+Aquí se encuentra la interfaz grafica la cual contiene una ventana y un boton.
+
+
+
